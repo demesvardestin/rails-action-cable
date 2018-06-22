@@ -18,6 +18,6 @@
 //= require_self
 //= require_tree ./channels
 
-$('#text-value').on('keyup', e => {
+$('#text-value').on('keyup', function() {
     document.getElementById('send').removeAttribute('disabled');
 });
