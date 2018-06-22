@@ -1,0 +1,58 @@
+<section id="chat-name">
+    <div class="col-md-12 no-horizontal-padding">
+        <div class="alert alert-primary" style="padding-top: 10px; padding-bottom: 0; padding-left: 30px; padding-right: 30px;">
+            <p class="font-20">
+                <!-- May include this icon, not sure yet -->
+                <!--<i class="fa fa-comments-o"></i>-->
+                #<%= @chatroom.topic.downcase %>
+            </p>
+        </div>
+    </div>
+</section>
+<section id="chat-room">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header background-yellow">
+                    <p class="white font-16">Participants</p>
+                </div>
+                <div class="card-body">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body" id="messageList" style="height: 100px;">
+                    <%= render partial: 'messages/message', collection: @chatroom.messages %>
+                </div>
+                <div class="card-footer background-transparent" style="padding-top: 5px; padding-bottom: 5px;">
+                    <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header background-yellow">
+                    <p class="white font-16">Active Chatrooms</p>
+                </div>
+                <div class="card-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    const textInput = document.getElementById('text-value')
+    $('#text-value').on('keyup', e => {
+        var value = textInput.value;
+        if (value.length > 0) {
+            document.getElementById('send').removeAttribute('disabled');
+        } else {
+            document.getElementById('send').setAttribute('disabled', 'true');
+        }
+    });
+</script>

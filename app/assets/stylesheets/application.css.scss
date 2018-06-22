@@ -1,0 +1,478 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ *= require toastr
+ */
+
+/* App Layout*/
+/* --scrollbar-- */
+::-webkit-scrollbar {
+    width: 10px;
+    color: #4e4e4f !important;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 15px #4e4e4f; 
+    // border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    // border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 15px #4e4e4f; 
+}
+.background-blue {
+    background-color: #2c91de !important;
+}
+.background-yellow {
+    background-color: #878706 !important;
+}
+.background-purple {
+    background-color: #7264a5 !important;
+}
+.background-cyan {
+    background-color: #1cc7c7 !important;
+}
+.half-bright{
+    -webkit-filter: brightness(200%);
+    filter: brightness(50%);
+}
+.background-image-rx {
+    background-image: url('/javascripts/pharmacy.png') no-repeat;
+}
+div.card-header.background-cyan {
+    border: 1px solid #1cc7c7 !important;
+}
+.theme-cyan {
+    color: #1cc7c7 !important;
+}
+.background-green {
+    background-color: #56c681 !important;
+}
+.background-gray {
+    background-color: #707071 !important;
+}
+.background-dark {
+    background-color: #454d5e !important;
+}
+.float-left {
+    float: left !important;
+}
+.float-right {
+    float: right !important;
+}
+.logo {
+    color: #fff;
+    letter-spacing: 3px;
+}
+.font-14 {
+    font-size: 14px !important;
+}
+.font-12 {
+    font-size: 12px;
+}
+.font-82 {
+    font-size: 82px;
+}
+
+.padding-14 {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+.card {
+    border: 1px solid #e5e5e5 !important;
+}
+.messageText {
+    height: 100px !important;
+}
+.no-display {
+    display: none !important;
+}
+.no-horizontal-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.no-right-padding {
+    padding-right: 0 !important;
+}
+.no-left-padding {
+    padding-left: 0 !important;
+}
+.theme-blue {
+    color: #4095e3 !important;
+}
+.white {
+    color: #fff !important;
+}
+.theme-gray {
+    color: #e5e5e5;
+}
+.theme-red {
+    color: #ff3232 !important;
+}
+.location-green {
+    color: #5f9616 !important;
+}
+.background-transparent {
+    background: transparent !important;
+}
+.background-white {
+    background: #fff !important;
+}
+.no-border-radius {
+    border-radius: 0 !important;
+}
+.no-box-shadow {
+    box-shadow: none !important;
+}
+.no-border-right {
+    border-right: none;
+}
+.no-border-left {
+    border-left: none;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.prescription-card-div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.prescription-card {
+    border: 1px solid #d9dfc0;
+}
+.border-theme-blue {
+    border: 1px solid #03032b;
+}
+.border-blue {
+    border-color: #4095e3 !important;
+}
+.font-50 {
+    font-size: 50px !important;
+}
+.border-green {
+    border-color: #05f005 !important;
+}
+.no-border {
+    border: none !important;
+}
+.no-border-bottom {
+    border-bottom: none !important;
+}
+.add-padding-top {
+    padding-top: 15px;
+}
+.add-margin-top {
+    margin-top: 10px;
+}
+.display-block {
+    display: block !important;
+}
+.add-padding-bottom {
+    padding-bottom: 15px;
+}
+.add-padding-top-10 {
+    padding-top: 10px;
+}
+.add-padding-top-5 {
+    padding-top: 5px;
+}
+.add-padding-left {
+    padding-left: 5px;
+}
+.add-padding-left-20 {
+    padding-left: 20px;
+}
+.add-padding-left-60 {
+    padding-left: 60px;
+}
+.theme-green {
+    color: #05f005 !important;
+}
+.theme-darkblue {
+    color: #265988;
+}
+.green {
+    color: #05f005 !important;
+}
+.theme-yellow {
+    color: #878706 !important;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+#scrollable {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#scrollableChild {
+    position: relative;
+    max-height: 100%;
+    overflow: auto;
+}
+#scrollPatientsCard {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#scrollPatientsCardChild {
+    position: relative;
+    max-height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* Notification Views */
+.inline-col {
+    display: inline !important;
+}
+.notif {
+    padding: 10px;
+    border-top: 1px solid #e1e1e2;
+    font-size: 14px;
+}
+.notification-col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #f8fbfd;
+    border-bottom: 1px solid #e1e1e2;
+}
+.notification-placeholder {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.circle-btn {
+    border-radius: 50% !important;
+}
+
+/* Footer */
+.footer {
+    padding: 30px;
+    background-color: #4095e3;
+}
+.footer-link {
+    color: #9bc6e4 !important;
+    font-size: 14px !important;
+}
+.footer-link:hover {
+    color: #fff !important
+}
+.footer-color {
+    color: #9bc6e4;
+}
+
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+.card-header {
+    padding-top: 10px !important;
+    padding-bottom: 0 !important;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input.has-no-border {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 10px;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+//   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 9px !important;
+  color: #4095e3 !important;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+#chat-name {
+    margin-top: 15px;
+}
+
+#text-value {
+    height: 38px;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Fonts */
+
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bold {
+    font-weight: 900;
+}
+
+.semi-bold {
+    font-weight: 700;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.medium-gray {
+    color: #707071 !important;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+.font-40 {
+    font-size: 40px !important;
+}
+
+.font-11 {
+    font-size: 11px;
+}
+
+.font-9 {
+    font-size: 9px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.weighted {
+    color: #32325d;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.border-white {
+    border-color: #fff !important;
+}
+
+.thick-border {
+    border-width: 2px !important;
+}
+
+.height-40 {
+    height: 40px !important;
+}
+
+.pale-border {
+    border-color: #e1e1e2 !important;
+}
+
+
+
+/* Mobile Rules */
+
+@media only screen and (max-device-width: 768px) {
+    
+}
