@@ -17,16 +17,20 @@
                     <p class="white font-16">Participants</p>
                 </div>
                 <div class="card-body">
-                    
+                    <%= render partial: 'chatroom/users', locals: {users: @chatroom.users} %>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-body" id="messageList" style="height: 100px;">
-                    <%= render partial: 'messages/message', collection: @chatroom.messages %>
+            <div class="card scrollableParent" style="height: 400px; z-index: 2; padding: 0 !important;">
+                <div id="scrollable" style="z-index: 1; padding-bottom: 45px;">
+                    <div id="scrollableChild">
+                        <div class="card-body" id="messageList" style="padding-bottom: 5px; border-bottom: none;">
+                            <%= render partial: 'messages/message', collection: @chatroom.messages %>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer background-transparent" style="padding-top: 5px; padding-bottom: 5px;">
+                <div class="card-footer background-transparent" style="border-top: none; z-index: 3; padding-top: 5px; margin-top: 355px !important;">
                     <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
                 </div>
             </div>

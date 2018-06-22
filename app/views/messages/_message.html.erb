@@ -1,10 +1,12 @@
-<div class="card">
-    <div class="card-body">
-        <p class="font-14">
-           <%= message.user %> 
-        </p>
-        <p class="font-14">
-           <%= message.content %> 
-        </p>
+<div class="row" style="margin-top: 10px;">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body" style="padding: 5px 10px;">
+                <p class="font-14">
+                   <span class="theme-blue"><%= message.user.username if message.user %></span><br />
+                   <%= message.content %> 
+                </p>
+            </div>
+        </div>
     </div>
 </div>

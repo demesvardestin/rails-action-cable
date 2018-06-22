@@ -1,29 +1,47 @@
-<h2>Sign up</h2>
+<style>
+  .has-no-border {
+    margin-top: 20px !important;
+  }
+</style>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="row">
+  <div class="col-md-4 offset-md-4" style="padding-top: 40px;">
+    <div class="card box-shadow">
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          
+          <div class="field">
+            <%= f.email_field :email, class:"form-control has-no-border no-box-shadow form--control font-14", autofocus: true, placeholder:" " %>
+            <label for="email">Email</label>
+          </div>
+          
+          <div class="field">
+            <%= f.text_field :username, class:"form-control has-no-border no-box-shadow form--control font-14", autofocus: true, placeholder:" " %>
+            <label for="username">Username</label>
+          </div>
+        
+          <div class="field">
+            <%= f.password_field :password, class:"form-control has-no-border no-box-shadow form--control font-14", autocomplete: "off", placeholder:" " %>
+            <label for="password">Password</label>
+          </div>
+          <div class="field">
+            <%= f.password_field :password_confirmation, class:"form-control has-no-border no-box-shadow form--control font-14", autocomplete: "off", placeholder:" " %>
+            <label for="password confirmation">Password Confirmation</label>
+          </div>
+        
+          <div class="actions" style="padding-top: 30px;">
+            <div class="row">
+              <div class="col-md-12">
+                <%= f.submit "Create account", class:"btn btn-primary btn-block" %>
+              </div>
+              <div class="col-md-12 add-padding-top">
+                <%= link_to "Log into existing account", new_user_session_path, class:"btn btn-info btn-block white" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

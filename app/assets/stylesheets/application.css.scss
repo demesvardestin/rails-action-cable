@@ -246,6 +246,11 @@ div.card-header.background-cyan {
     overflow-x: hidden;
 }
 
+#scrollableParent {
+    position: relative;
+    height: 100%;
+}
+
 /* Notification Views */
 .inline-col {
     display: inline !important;

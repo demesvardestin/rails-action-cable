@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class WebChatChannel < ApplicationCable::Channel
   def subscribed
-    stream_from 'messages'
+    stream_from 'web_chat_channel'
   end
 
   def unsubscribed

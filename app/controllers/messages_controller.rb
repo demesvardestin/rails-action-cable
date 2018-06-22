@@ -8,8 +8,8 @@ class MessagesController < ApplicationController
       redirect_back(fallback_option: root_path)
     else
       ActionCable.server.broadcast 'messages',
-        message: message.content,
-        user: message.user.username
+        message: @message.content,
+        user: @message.user.username
       head :ok
     end
   end

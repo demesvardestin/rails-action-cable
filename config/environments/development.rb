@@ -48,7 +48,7 @@ Rails.application.configure do
   # Devise configuration
   config.action_mailer.default_url_options = { host: 'http://rails-chat-demo07.c9users.io', port: 8080 }
   # ActionCable configuration
-  config.action_cable.url = "http://rails-chat-demo07.c9users.io:8080/cable"
+  config.action_cable.url = "http://rails-chat-demo07.c9users.io:3000/cable"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
