@@ -43,16 +43,3 @@
         </div>
     </div>
 </section>
-
-
-<script type="text/javascript">
-    const textInput = document.getElementById('text-value')
-    $('#text-value').on('keyup', e => {
-        var value = textInput.value;
-        if (value.length > 0) {
-            document.getElementById('send').removeAttribute('disabled');
-        } else {
-            document.getElementById('send').setAttribute('disabled', 'true');
-        }
-    });
-</script>
